@@ -227,3 +227,12 @@
 .page-hero .sub{color:rgba(255,255,255,.9);max-width:56ch;margin-top:16px;font-size:1.12rem}
 .crumb{font-weight:700;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--saffron-2);margin-bottom:14px;display:inline-block}
 
+
+/* ===== real-photo "in action" gallery ===== */
+.ingrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:50px}
+@media(min-width:680px){.ingrid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1000px){.ingrid{grid-template-columns:repeat(4,1fr)}}
+.ingrid .g{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:1/1;background:var(--paper);box-shadow:0 8px 20px rgba(38,32,25,.08)}
+.ingrid .g img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.ingrid .g:hover img{transform:scale(1.06)}
+.ingrid .g figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 12px 11px;font-size:.78rem;font-weight:600;color:#fff;background:linear-gradient(180deg,transparent,rgba(20,13,6,.82))}
